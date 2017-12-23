@@ -1,0 +1,61 @@
+#header {
+	margin-top: 20px;
+}
+
+#tabla {
+	margin-top: 30px;
+}
+
+#alertas {
+	margin-top: 30px;
+}
+
+#boton {
+	margin: 2px;
+}
+
+.sha{
+    -webkit-box-shadow: 0px 0px 18px 0px rgba(48, 50, 50, 0.48);
+    -moz-box-shadow:    0px 0px 18px 0px rgba(48, 50, 50, 0.48);
+    box-shadow:         0px 0px 18px 0px rgba(48, 50, 50, 0.48);
+ }
+
+ #indicadores{
+    border: 1px solid black;
+ }
+
+ #buscarElemento{
+ 	margin: 5px;
+ }
+
+.well{
+background-color: #FFFFFF;
+/*background-color: #CEF6F5;*/
+}
+
+#registrarme{
+  margin-bottom: 10px;  
+}
+
+footer {
+ 	margin-top:  2em;
+ 	padding-top: 1em;
+ 	border-top: solid 1px silver;
+ 	color: black;
+ 	text-align: center;
+}
+footer address, footer p {
+ 		margin-top: 0.3em; 
+}
+
+/*Para alinear el texto con la imagen en el header*/
+img.alineadoTextoImagenArriba{
+  vertical-align: text-top;  
+}
+img.alineadoTextoImagenCentro{
+  vertical-align: middle;
+}
+
+img.alineadoTextoImagenAbajo{
+  vertical-align: text-bottom;  
+}

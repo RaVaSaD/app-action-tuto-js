@@ -1,0 +1,108 @@
+<div class="animated fadeIn">
+
+	<!-- Perfil alumno -->
+	<div ng-if="tipoUsuario == 'alumno'" ng-cloak>
+      <h2 class="text-center">Alumno</h2>
+      	
+      	<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Nombre</label>
+		    	<input disabled type="text" class="form-control" ng-model="perfil.nombre"></input>
+		    </div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Apellidos</label>
+		    	<input disabled type="text" class="form-control" ng-model="perfil.apellidos"></input>
+		    </div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Matrícula</label>
+		    	<input disabled type="text" class="form-control" ng-model="perfil.matricula"></input>
+		    </div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Correo electrónico</label>
+		    	<input disabled type="text" class="form-control" ng-model="emailUsuario"></input>
+		    </div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Telefono</label>
+		    	<input disabled type="text" class="form-control" ng-model="perfil.telefono"></input>
+		    </div>
+		</div>
+
+    </div>
+
+    <!-- Perfil profesores -->
+    <div ng-if="tipoUsuario == 'profesor'" ng-cloak>
+      <h2 class="text-center">Profesor</h2>
+      	<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Nombre</label>
+		    	<input disabled type="text" class="form-control" ng-model="perfil.nombre"></input>
+		    </div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Apellidos</label>
+		    	<input disabled type="text" class="form-control" ng-model="perfil.apellidos"></input>
+		    </div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Despacho</label>
+		    	<input disabled type="text" class="form-control" ng-model="perfil.despacho"></input>
+		    </div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Correo electrónico</label>
+		    	<input disabled type="text" class="form-control" ng-model="emailUsuario"></input>
+		    </div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Telefono</label>
+		    	<input disabled type="text" class="form-control" ng-model="perfil.telefono"></input>
+		    </div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Horario</label>
+		    	<input disabled type="text" class="form-control" ng-model="perfil.horario_tutos"></input>
+		    </div>
+		</div>
+    </div>
+
+    <!-- Perfil administrador -->
+    <div ng-if="tipoUsuario == 'administrador'" ng-cloak>
+      <h2 class="text-center">Administrador</h2>
+      	<div class="col-md-6">
+			<div class="form-group">
+	    		<label>Tipo</label>
+		    	<input disabled type="text" class="form-control" ng-model="perfil.tipo"></input>
+		    </div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="form-group">
+	    		<label>Función</label>
+		    	<input disabled type="text" class="form-control" ng-model="perfil.funcion"></input>
+		    </div>
+		</div>		
+    </div>
+
+</div>

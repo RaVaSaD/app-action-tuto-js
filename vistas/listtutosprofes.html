@@ -1,0 +1,14 @@
+<div class="animated fadeIn">
+	<div class="panel panel-danger">
+		<div class="panel-heading"><strong>Panel Tutorias</strong></div>
+		
+		<table class="table table-hover">
+			<thead>
+				<tr><th>Profe</th><th>Asignatura</th><th>Título</th><th>Fecha</th><th>Hora</th><th>Alumno</th><th>Estado</th><th>Opciones</th></tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="tuto in tutos"><td>{{tuto.nombre_prof}}</td><td>{{ tuto.asignatura }}</td><td>{{ tuto.titulo }}</td><td>{{ tuto.fecha }}</td><td>{{ tuto.hora }}</td><td>{{ tuto.nombre_al }}</td><td>{{ tuto.estado }}</td><td><button id="boton" type="button" ng-click="editarTuto(tuto.id)" class="btn btn-primary">Editar</button><button id="boton" type="button" ng-click="eliminarTuto(tuto.id)" class="btn btn-danger">Borrar</button></td></tr>
+			</tbody>							
+		</table>			
+	</div>
+</div>

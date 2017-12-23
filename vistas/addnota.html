@@ -1,0 +1,48 @@
+<div class="animated fadeIn">
+	<form class="form-peticion" ng-submit="AddNota(nota)">
+		
+		<div class="col-md-12">
+			<div class="form-group">
+	    		<label>Titulo</label>
+		    	<input type="text" ng-model="nota.titulo" class="form-control" placeholder="Escribe el titulo de tu nota">
+		    </div>
+		</div>
+
+		<div class="col-md-12">
+			<div class="form-group">
+	    		<label>Descripcion</label>
+		    	<textarea type="text" ng-model="nota.descripcion" rows="5" class="form-control" placeholder="Escribe la descripción para tu nota"> </textarea> 
+		    </div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="form-group">
+	    		<label>Asignatura</label>
+		    	<input type="text" class="form-control" ng-model="nota.asignatura" placeholder="Escribe la asignatura"></input>
+		    </div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="form-group">
+	    		<label>Tipo</label>
+	    		<select class="form-control" ng-model="nota.tipo">	    		  
+			      <option value="Ejercicio">Ejercicio</option>
+			      <option value="Tarea">Tarea</option>
+			      <option value="Práctica">Práctica</option>
+			      <option value="Presentación">Presentación</option>
+			      <option value="Trabajo">Trabajo</option>
+			      <option value="TFG">TFG</option>			      
+			    </select>		    	
+		    </div>
+		</div>				
+
+		
+
+		<div class="col-md-6" id="boton">
+			<div class="form-boton">
+				<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> Enviar</button>
+				<button type="reset" class="btn btn-danger"><span class="glyphicon glyphicon-floppy-remove" aria-hidden="true"></span> Limpiar</button>
+			</div>
+		</div>	
+	</form>
+</div>

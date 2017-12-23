@@ -1,0 +1,159 @@
+﻿<h3 class="text-center">Registro</h3>
+
+</br>
+
+<form class="form-auth" ng-submit="registro(usuario)" ng-hide="formularioInicial">
+
+  <div class="form-group">
+    <div class="input-group col-md-offset-4 col-md-4">
+      <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
+      <input type="email" class="form-control" placeholder="Correo Electrónico" 
+      name="email" ng-model="usuario.email" required >
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group col-md-offset-4 col-md-4">
+      <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
+      <input type="password" class="form-control" placeholder="Contraseña" name="password" ng-model="usuario.password" required>
+    </div>
+  </div>
+
+    <div class="form-group">
+      <div class="input-group col-md-offset-4 col-md-4">
+      <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+        <select class="form-control" ng-model="usuario.tipo">            
+          <option value="alumno">Alumno</option>
+          <option value="profesor">Profesor</option>          
+        </select>
+      </div>
+    </div>        
+
+  <div class="text-center">
+    <button id="registrarme" type="submit" class="btn btn-danger">Registrarme</button>
+  </div>
+
+</form>  
+
+<div class="row" ng-show="formulariosRegistro">
+  <form class="form-auth" ng-submit="datosAlumno(alumno)" ng-show="alertaRegistroUsuarioExito">
+
+    <div class="form-group">
+      <div class="input-group col-lg-offset-4 col-lg-4">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+        <input type="nombre" class="form-control" placeholder="Nombre" 
+        name="nombre" ng-model="alumno.nombre" required >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group col-lg-offset-4 col-lg-4">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></div>
+        <input type="apellidos" class="form-control" placeholder="Apellidos" name="apellidos" ng-model="alumno.apellidos" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group col-lg-offset-4 col-lg-4">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-education"></i></div>
+        <input type="matricula" class="form-control" placeholder="Matricula" 
+        name="matricula" ng-model="alumno.matricula" required >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group col-lg-offset-4 col-lg-4">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></div>
+        <input type="telefono" class="form-control" placeholder="Teléfono" name="telefono" ng-model="alumno.telefono" required>
+      </div>
+    </div>
+     
+    <div class="text-center">
+      <button type="submit" class="btn btn-success">Aceptar</button>
+    </div>
+
+  </form>
+
+  <div class="alert alert-success alert-dismissible fade in col-md-offset-4 col-md-4 animated wobble" id="alertas" role="alert" ng-show="alertaRegistroUsuarioExito">
+    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>     
+    Rellena los siguientes campos que hay a continuación para finalizar el registro y pulsa aceptar.
+  </div>
+
+</div>
+
+<div class="row" ng-show="formulariosRegistro">
+  <form class="form-auth" ng-submit="datosProfe(profe)" ng-show="alertaRegistroProfeExito">
+
+    <div class="form-group">
+      <div class="input-group col-md-offset-4 col-md-4">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+        <input type="nombre" class="form-control" placeholder="Nombre" 
+        name="nombre" ng-model="profe.nombre" required >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group col-md-offset-4 col-md-4">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></div>
+        <input type="apellidos" class="form-control" placeholder="Apellidos" name="apellidos" ng-model="profe.apellidos" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group col-md-offset-4 col-md-4">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-education"></i></div>
+        <input type="asignatura" class="form-control" placeholder="Asignatura" 
+        name="asignatura" ng-model="profe.asignatura" required >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group col-md-offset-4 col-md-4">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></div>
+        <input type="telefono" class="form-control" placeholder="Teléfono" name="telefono" ng-model="profe.telefono" required>
+      </div>
+    </div>  
+
+    <div class="form-group">
+      <div class="input-group col-md-offset-4 col-md-4">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-home"></i></div>
+        <input type="despacho" class="form-control" placeholder="Despacho" 
+        name="despacho" ng-model="profe.despacho" required >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group col-md-offset-4 col-md-4">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-dashboard"></i></div>
+        <input type="horario_tutos" class="form-control" placeholder="Horario de Tutorías" 
+        name="horario_tutos" ng-model="profe.horario_tutos" required >
+      </div>
+    </div>
+     
+    <div class="text-center">
+      <button type="submit" class="btn btn-success">Aceptar</button>
+    </div>
+
+  </form>
+
+  <div class="alert alert-success alert-dismissible fade in col-md-offset-4 col-md-4 animated wobble" id="alertas" role="alert" ng-show="alertaRegistroProfeExito">
+    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>     
+    Rellena los siguientes campos que para finalizar el registro y pulsa aceptar.
+  </div>
+
+</div>
+
+<div class="alert alert-warning alert-dismissible fade in col-md-offset-4 col-md-4 animated bounce" id="alertas" role="alert" ng-show="alertaRegistroError">
+  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+  <strong>!Lo siento!</strong> Este usuario ya existe.
+</div>
+
+<div class="alert alert-success alert-dismissible fade in col-md-offset-4 col-md-4 animated wobble" id="alertas" role="alert" ng-show="alertaRegistroUsuarioAceptar">
+  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>     
+  <strong>¡Usuario registrado!</strong> Ya puedes iniciar la sesión.
+</div>
+
+<div class="alert alert-warning alert-dismissible fade in col-md-offset-4 col-md-4 animated bounce" id="alertas" role="alert" ng-show="alertaRegistroProfeAceptar">
+  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+  <strong>!Profesor registrado!</strong> Recuerda, tu cuenta queda pendiente de ser aprobada por el administrador de ActionTuto. 
+</div>

@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html lang="es-ES" ng-app="actionTuto">
+<head>
+<meta http-equiv="Content-Type" charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ActionTuto 1.02</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+<link rel="stylesheet" type="text/css" href="js/plugins/sweetalert/sweetalert.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="icon" href="img/ico.png" type="image/x-icon" />
+
+</head>
+
+<body ng-controller="PrincipalController">
+
+	<div class="container">
+		<div ng-include=" 'vistas/header.html' "></div>		
+	</div>
+
+	<div class="container">
+		<div ng-include=" 'vistas/menu.html' "></div>	
+	</div>
+	
+	<div class="container">
+  		<div ng-view></div>
+	</div>
+
+<script type="text/javascript" src="js/plugins/angular.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="js/plugins/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/plugins/angular-route.min.js"></script>
+<script type="text/javascript" src="js/plugins/mask.min.js"></script>
+<script type="text/javascript" src="js/plugins/sweetalert/sweetalert.min.js"></script>    
+<script type="text/javascript" src="js/app.module.js"></script>
+<script type="text/javascript" src="js/app.config.router.js"></script>
+<script type="text/javascript" src="js/addNota.controller.js"></script>
+<script type="text/javascript" src="js/activarProfesores.controller.js"></script>
+<script type="text/javascript" src="js/listarProfesores.controller.js"></script>
+<script type="text/javascript" src="js/editNota.controller.js"></script>
+<script type="text/javascript" src="js/addTuto.controller.js"></script>
+<script type="text/javascript" src="js/editTuto.controller.js"></script>
+<script type="text/javascript" src="js/editTutoProfes.controller.js"></script>
+<script type="text/javascript" src="js/exitSession.controller.js"></script>
+<script type="text/javascript" src="js/getNotas.controller.js"></script>
+<script type="text/javascript" src="js/getTeachers.controller.js"></script>
+<script type="text/javascript" src="js/getTutos.controller.js"></script>
+<script type="text/javascript" src="js/getTutosProfes.controller.js"></script>
+<script type="text/javascript" src="js/initSession.controller.js"></script>
+<script type="text/javascript" src="js/registro.controller.js"></script>
+<script type="text/javascript" src="js/principal.controller.js"></script>
+<script type="text/javascript" src="js/getPerfil.controller.js"></script>
+
+</body>
+<footer ng-include=" 'vistas/footer.html' "></footer>
+</html>	

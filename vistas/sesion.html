@@ -1,0 +1,55 @@
+﻿<!--<h3 class="text-center">Iniciar Aplicación</h3>-->
+
+</br>
+
+<div class="container animated fadeIn">
+  <img src="img/tutoria.png" alt="Imagen de tutoria" class="img-rounded center-block">
+  <form name="formLogin" class="form-auth" ng-submit="entrar(formData)">
+    <fieldset ng-hide="login">
+
+        <div class="form-group">
+          <div class="input-group col-md-offset-4 col-md-4">
+            <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
+              <input type="email" class="form-control" placeholder="Correo Electrónico" 
+              name="email" ng-model="formData.email" required >
+
+            </div>
+          </div>
+
+        <div class="form-group">
+          <div class="input-group col-md-offset-4 col-md-4">
+            <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
+              <input type="password" class="form-control" placeholder="Contraseña" name="password" ng-model="formData.password" required>
+            </div>
+          </div>
+        
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+        <button class="btn btn-success" ng-click="registrarse()" value="Resgistrarse">Registrarse</button>
+        <button type="reset" class="btn btn-info" value="Limpiar" ng-click="limpiar()">Limpiar</button>
+      </div>
+    </fieldset>
+    
+    <!-- ALERTA DE USUARIO Y CONTRASEÑA INCORRECTA --> 
+    <div class="alert alert-warning alert-dismissible fade in col-md-offset-4 col-md-4 animated bounce" id="alertas" role="alert" ng-hide="alertaLoginError">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+      <strong>!Lo siento!</strong> Tu Correo o Contraseña son incorrectos.
+    </div>
+
+    <!-- ALERTA DE PROFESOR PENDIENTE DE AUTORIZAR --> 
+    <div class="alert alert-warning alert-dismissible fade in col-md-offset-4 col-md-4 animated bounce" id="alertas" role="alert" ng-hide="alertaLoginProfeDes">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+      <strong>!Lo siento!</strong> Tu cuenta debe ser aprobada por el administrador de ActionTuto.
+    </div>
+
+    <!-- ALERTA DE USUARIO Y CONTRASEÑA CORRECTOS -->  
+    <div class="alert alert-success alert-dismissible fade in col-md-offset-4 col-md-4 animated wobble" id="alertas" role="alert" ng-hide="alertaLoginCorrecto">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+     <!-- Con {{rsJSON | json}} Vamos a renderizar nuestro JSON en esta Zona  -->
+      <strong>¡Bienvenido!</strong> {{rsJSON | json }}.
+    </div>
+
+</form>
+
+</div>
+

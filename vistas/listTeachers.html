@@ -1,0 +1,31 @@
+<div class="animated fadeIn">	
+	<div class="row" id="buscarElemento">
+		<label class="col-md-2">Nombre del Profesor: </label>
+		<input class="col-md-3" type="text" ng-model="busqueda" placeholder="Escribe el nombre del profesor">
+		<label class="col-md-2">Ordenar por: </label>
+		<select class="col-md-2" ng-model="ordenar">	    		  
+		    <option value="nombre">Nombre</option>
+		    <option value="apellidos">Apellidos</option>
+		    <option value="asignatura">Asignatura</option>			      
+		</select>
+	</div>
+
+	<div class="panel panel-info">
+		<div class="panel-heading"><strong>Panel Profesores</strong></div>
+		<table class="table table-hover">
+			<thead>
+				<tr><th>Nombre</th><th>Apellidos</th><th>Asignatura</th><th>Despacho</th><th>Email</th><th>Horario</th><th>Opción</th></tr></thead>
+			<tbody>
+				<tr ng-repeat="teacher in teachers | filter: {nombre: busqueda} | orderBy : ordenar ">
+					<td>{{ teacher.nombre }}</td>
+					<td>{{ teacher.apellidos }}</td>
+					<td>{{ teacher.asignatura }}</td>
+					<td>{{ teacher.despacho }}</td>
+					<td>{{teacher.email}}</td>
+					<td>{{teacher.horario_tutos}}</td>
+					<td><button ng-show="teacher.estado == 'A'" id="boton" ng-click="addTuto(teacher.id, teacher.nombre, teacher.apellidos, teacher.asignatura)" type="button" class="btn btn-success"> Nueva Tutoria</button><button ng-show="teacher.estado == 'D'" id="boton" type="button" class="btn btn-danger"> Inactivo</button></td>
+				</tr>
+			</tbody>							
+		</table>			
+	</div>
+</div>

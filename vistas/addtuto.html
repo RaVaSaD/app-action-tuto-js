@@ -1,0 +1,65 @@
+<div class="animated fadeIn">
+	<form class="form-peticion" ng-submit="AddTuto(tuto)">
+		
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Asignatura</label>
+		    	<input disabled type="text" class="form-control" ng-model="datosProfe.asignatura" placeholder="Escribe la asignatura"></input>
+		    </div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Titulo</label>
+		    	<input type="text" ng-model="tuto.titulo" class="form-control" placeholder="Escribe el titulo de la tutoria">
+		    </div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Estado</label>
+		    	<select disabled class="form-control" ng-model="tuto.estado">
+		    		<option value=""></option>
+		    		<option value="Aceptada">Aceptada</option>
+				    <option value="Pendiente">Pendiente</option>
+				    <option value="Rechazada">Rechazada</option>			      
+				</select>
+		    </div>
+		</div>
+
+		<div class="col-md-12">
+			<div class="form-group">
+	    		<label>Descripcion</label>
+		    	<textarea type="text" ng-model="tuto.descripcion" rows="5" class="form-control" placeholder="Escribe la descripcion para la tutoria"> </textarea> 
+		    </div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Profesor</label>
+		    	<input disabled type="text" ng-model="datosProfe.nombre_prof" class="form-control">
+		    </div>
+		</div>	
+
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Fecha (dd-MM-YYYY) </label>
+		    	<input type="text" ui-mask="{{mascaraFecha}}" ng-model="tuto.fecha" class="form-control" placeholder="__-__-____">
+		    </div>
+		</div>	
+
+		<div class="col-md-4">
+			<div class="form-group">
+	    		<label>Hora (HH:MM)</label>
+		    	<input type="text" ui-mask="{{mascaraHora}}" ng-model="tuto.hora" class="form-control" placeholder="__:__">
+		    </div>
+		</div>				
+
+		<div class="col-md-6" id="boton">
+			<div class="form-boton">
+				<button type="submit" class="btn btn-success glyphicon glyphicon-ok"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Enviar</button>
+				<button type="button" ng-click="limpiarTuto(tuto)" class="btn btn-danger glyphicon glyphicon-remove"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Limpiar</button>
+			</div>
+		</div>	
+	</form>
+</div>

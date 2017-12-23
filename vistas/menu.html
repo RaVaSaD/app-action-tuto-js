@@ -1,0 +1,59 @@
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex6-collapse">
+        <span class="sr-only">Desplegar navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" >Menú</a>
+    </div>
+
+    <!-- Menú de inicio de sesión -->
+    <div ng-if="tipoUsuario == ''"  class="collapse navbar-collapse navbar-ex6-collapse sha" ng-cloak>
+      <ul class="nav navbar-nav">
+        <li ng-hide="login"><a href="#/"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>         
+        <li><a href="#/about"><span class="glyphicon glyphicon-info-sign"></span> Acerca de</a></li>        
+        <li ng-show="login"><a href="#/"><span class="label label-default">{{ emailUsuario }}</span></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+
+    <!-- Menú alumnos -->
+    <div ng-if="tipoUsuario == 'alumno'" class="collapse navbar-collapse navbar-ex6-collapse sha" ng-cloak>
+      <ul class="nav navbar-nav">
+        <li ng-hide="login"><a href="#/"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>	
+        <li ng-show="login"><a href="#/listteachers"><span class="glyphicon glyphicon-education"></span> Listar Profesores</a></li>
+    		<li ng-show="login"><a href="#/listtuto"><span class="glyphicon glyphicon-user"></span> Listar Tutorias</a></li>
+    		<li ng-show="login"><a href="#/listnotes"><span class="glyphicon glyphicon-list-alt"></span> Listar Notas</a></li>
+    		<li ng-show="login"><a href="#/addnota"><span class="glyphicon glyphicon-pencil"></span> Alta Notas</a></li>		
+    		<li><a href="#/about"><span class="glyphicon glyphicon-info-sign"></span> Acerca de</a></li>
+    		<li ng-show="login"><a href="#/salir"><span class="glyphicon glyphicon-remove"></span> Cerrar Sesión</a></li>
+    		<li ng-show="login"><a href="#/perfil"><span class="label label-default">{{ emailUsuario }}</span></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+
+    <!-- Menú profesores -->
+    <div ng-if="tipoUsuario == 'profesor'" class="collapse navbar-collapse navbar-ex6-collapse sha" ng-cloak>
+      <ul class="nav navbar-nav">
+        <li ng-hide="login"><a href="#/"><span class="glyphicon glyphicon-home"></span> Inicio</a></li> 
+        <li ng-show="login"><a href="#/listtutoprofe"><span class="glyphicon glyphicon-user"></span> Listar Tutorias</a></li>
+        <li><a href="#/about"><span class="glyphicon glyphicon-info-sign"></span> Acerca de</a></li>
+        <li ng-show="login"><a href="#/salir"><span class="glyphicon glyphicon-remove"></span> Cerrar Sesión</a></li>
+        <li ng-show="login"><a href="#/perfil"><span class="label label-default">{{ emailUsuario }}</span></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+
+    <!-- Menú administrador -->
+    <div ng-if="tipoUsuario == 'administrador'" class="collapse navbar-collapse navbar-ex6-collapse sha" ng-cloak>
+      <ul class="nav navbar-nav">
+        <li ng-hide="login"><a href="#/"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
+        <li ng-show="login"><a href="#/listarprofesores"><span class="glyphicon glyphicon-user"></span> Listado de Profesores</a></li> 
+        <li ng-show="login"><a href="#/activarprofesores"><span class="glyphicon glyphicon-wrench"></span> Administrar Profesores</a></li>
+        <li><a href="#/about"><span class="glyphicon glyphicon-info-sign"></span> Acerca de</a></li>
+        <li ng-show="login"><a href="#/salir"><span class="glyphicon glyphicon-remove"></span> Cerrar Sesión</a></li>
+        <li ng-show="login"><a href="#/perfil"><span class="label label-default">{{ emailUsuario }}</span></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+    
+</nav>

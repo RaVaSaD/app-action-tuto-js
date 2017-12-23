@@ -1,0 +1,14 @@
+<div class="animated fadeIn">
+	<div class="panel panel-success">	
+		<div class="panel-heading"><strong>Panel Notas</strong></div>
+		<table class="table table-hover">
+			<thead>
+				<tr><th>Titulo</th><th>Descripcion</th><th>Asignatura</th><th>Tipo</th><th>Opciones</th></tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="note in notes"><td>{{ note.titulo }}</td><td>{{ note.descripcion }}</td><td>{{ note.asignatura }}</td><td>{{ note.tipo }}</td><td><button id="boton" type="button" class="btn btn-primary" ng-click="editarNota(note.id)">Editar</button><button id="boton" type="button" class="btn btn-danger" ng-click="borrarNota(note.id)">Borrar</button></td></tr>
+			</tbody>							
+		</table>			
+	</div>
+	<button id="boton" type="button" class="btn btn-success" ng-click="irNuevaNota()"><span class="glyphicon glyphicon-pencil"></span> Nueva Nota</button>
+</div>
